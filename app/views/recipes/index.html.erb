@@ -1,5 +1,16 @@
+<h1>All Recipes</h1>
+
+<form_action= "/recipes" method "get">
+  <label>Search:</label><br>
+  <input type="text" name="search" />
+  <input type="submit" />
+</form>
+
 <ul>
 <% @recipes.each do |recipe| %>
   <li><%= link_to recipe.title, recipe %></li>
 <% end %>
 </ul>
+
+<br><br>
+<button><%= link_to "New Recipe", new_recipe_path %></button>
